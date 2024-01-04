@@ -1,0 +1,105 @@
+:root {
+  --primary-color: rgb(0, 154, 216);
+  --secondary-color: rgb(30, 32, 43);
+  --secondary-color-rgb: 30, 32, 43;
+  --tertiary-color: rgb(38, 41, 54);
+  --light-tertiary-color: rgb(50, 53, 68);
+  --transition-duration: 0.5s;
+}
+
+.custom-bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.custom-bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.custom-bg-tertiary {
+  background-color: var(--tertiary-color);
+}
+
+.custom-bg-light-tertiary {
+    background-color: var(--light-tertiary-color);
+}
+
+.custom-text-primary {
+  color: var(--primary-color) !important;
+}
+
+.custom-text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.custom-text-tertiary {
+  color: var(--tertiary-color);
+}
+
+.custom-text-gray {
+  color: rgb(106, 106, 106);
+}
+
+.nav-link {
+  border: 1px solid transparent;
+  border-radius: 100px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color);
+}
+
+main {
+  background-image: linear-gradient(
+      180deg,
+      rgba(var(--secondary-color-rgb), 0.5) 60%,
+      var(--secondary-color) 60%
+    ),
+    url(../assets/michael-discenza-5omwAMDxmkU-unsplash.jpg);
+  background-position: center center;
+  background-size: cover;
+}
+
+.form-control {
+  border-color: transparent !important;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    box-sizing: content-box;
+}
+
+.icon-lg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  box-sizing: content-box;
+  transition: var(--transition-duration);
+}
+
+.weather-content-header {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon-lg-container:hover {
+  background-color: var(--primary-color) !important;
+}
+
+.icon-lg-container:hover i {
+  color: white !important;
+}
+
+i {
+  transition: var(--transition-duration);
+}
