@@ -56,6 +56,7 @@
       <div class="container">
         <div class="input-group mb-3">
           <input
+            id="locationTextInput"
             type="text"
             class="form-control py-2 custom-bg-secondary text-white"
             placeholder="Find your location..."
@@ -64,6 +65,7 @@
             class="btn btn-primary custom-bg-primary text-white px-4"
             type="button"
             id="find-button"
+            onclick="fetchWeatherDataTextInput()"
           >
             Find
           </button>
@@ -71,12 +73,16 @@
 
         <div class="row rounded-3 overflow-hidden g-0">
           <div class="col-4 d-flex flex-column">
-            <div class="weather-content custom-bg-tertiary text-white flex-grow-1 d-flex flex-column">
+            <div
+              class="weather-content custom-bg-tertiary text-white flex-grow-1 d-flex flex-column"
+            >
               <div class="weather-content-header d-flex p-2">
                 <p id="weather-content-day-1" class="flex-grow-1">Thursday</p>
                 <p id="weather-content-date-1">4January</p>
               </div>
-              <div class="weather-content-body p-2 d-flex flex-column justify-content-around flex-grow-1">
+              <div
+                class="weather-content-body p-2 d-flex flex-column justify-content-around flex-grow-1"
+              >
                 <h3>Cairo</h3>
                 <div class="d-flex align-items-center">
                   <h1 class="me-3 text-nowrap">16 C</h1>
@@ -88,7 +94,9 @@
                     />
                   </picture>
                 </div>
-                <p id="weather-content-condition-1" class="custom-text-primary">Mist</p>
+                <p id="weather-content-condition-1" class="custom-text-primary">
+                  Mist
+                </p>
                 <div class="row">
                   <div
                     class="weather-details-item col-4 d-flex justify-content-start align-items-center"
@@ -134,33 +142,53 @@
             </div>
           </div>
           <div class="col-4 d-flex flex-column text-center">
-            <div class="weather-content custom-bg-light-tertiary text-white flex-grow-1 d-flex flex-column">
-                <div class="weather-content-header p-2">
-                    <p id="weather-content-day-2">Friday</p>
-                </div>
-                <div class="weather-content-body p-2 flex-grow-1">
-                    <picture>
-                        <img class="img-fluid" src="assets/michael-discenza-5omwAMDxmkU-unsplash.jpg" alt="">
-                    </picture>
-                    <h2 id="weather-content-max-degree-2">23</h2>
-                    <h4 id="weather-content-min-degree-2" class="custom-text-gray">12</h4>
-                    <p id="weather-content-condition-2" class="custom-text-primary">Mist</p>
-                </div>
+            <div
+              class="weather-content custom-bg-light-tertiary text-white flex-grow-1 d-flex flex-column"
+            >
+              <div class="weather-content-header p-2">
+                <p id="weather-content-day-2">Friday</p>
+              </div>
+              <div class="weather-content-body p-2 flex-grow-1">
+                <picture>
+                  <img
+                    class="img-fluid"
+                    src="assets/michael-discenza-5omwAMDxmkU-unsplash.jpg"
+                    alt=""
+                  />
+                </picture>
+                <h2 id="weather-content-max-degree-2">23</h2>
+                <h4 id="weather-content-min-degree-2" class="custom-text-gray">
+                  12
+                </h4>
+                <p id="weather-content-condition-2" class="custom-text-primary">
+                  Mist
+                </p>
+              </div>
             </div>
           </div>
           <div class="col-4 d-flex flex-column text-center">
-            <div class="weather-content custom-bg-tertiary text-white flex-grow-1 d-flex flex-column">
-                <div class="weather-content-header p-2">
-                    <p id="weather-content-day-3">Friday</p>
-                </div>
-                <div class="weather-content-body p-2 flex-grow-1">
-                    <picture>
-                        <img class="img-fluid" src="assets/michael-discenza-5omwAMDxmkU-unsplash.jpg" alt="">
-                    </picture>
-                    <h2 id="weather-content-max-degree-3">23</h2>
-                    <h4 id="weather-content-min-degree-3" class="custom-text-gray">12</h4>
-                    <p id="weather-content-condition-3" class="custom-text-primary">Mist</p>
-                </div>
+            <div
+              class="weather-content custom-bg-tertiary text-white flex-grow-1 d-flex flex-column"
+            >
+              <div class="weather-content-header p-2">
+                <p id="weather-content-day-3">Friday</p>
+              </div>
+              <div class="weather-content-body p-2 flex-grow-1">
+                <picture>
+                  <img
+                    class="img-fluid"
+                    src="assets/michael-discenza-5omwAMDxmkU-unsplash.jpg"
+                    alt=""
+                  />
+                </picture>
+                <h2 id="weather-content-max-degree-3">23</h2>
+                <h4 id="weather-content-min-degree-3" class="custom-text-gray">
+                  12
+                </h4>
+                <p id="weather-content-condition-3" class="custom-text-primary">
+                  Mist
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -168,50 +196,71 @@
     </main>
 
     <footer class="custom-bg-light-tertiary py-5">
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-lg-7">
-              <div class="input-group mb-3">
-                <input
-                  type="email"
-                  class="form-control py-2 custom-bg-secondary text-white"
-                  placeholder="Enter your email to subscribe..."
-                />
-                <button
-                  class="btn btn-primary custom-bg-primary text-white px-4"
-                  type="button"
-                  id="subscribe-button"
-                >
-                  Subscribe
-                </button>
-              </div>
-            </div>
-            <div class="col-lg-3 d-flex">
-              <a href="https://www.facebook.com" class="text-decoration-none mx-1">
-                <div class="icon-lg-container p-1 bg-danger rounded-circle custom-bg-secondary">
-                  <i class="fa-brands fa-facebook-f fa-lg custom-text-primary"></i>
-                </div>
-              </a>
-              <a href="https://www.twitter.com" class="text-decoration-none mx-1">
-                <div class="icon-lg-container p-1 bg-danger rounded-circle custom-bg-secondary">
-                  <i class="fa-brands fa-twitter fa-lg custom-text-primary"></i>
-                </div>
-              </a>
-              <a href="https://www.google.com" class="text-decoration-none mx-1">
-                <div class="icon-lg-container p-1 bg-danger rounded-circle custom-bg-secondary">
-                  <i class="fa-brands fa-google-plus-g fa-lg custom-text-primary"></i>
-                </div>
-              </a>
-              <a href="https://www.pinterest.com" class="text-decoration-none mx-1">
-                <div class="icon-lg-container p-1 bg-danger rounded-circle custom-bg-secondary">
-                  <i class="fa-brands fa-pinterest fa-lg custom-text-primary"></i>
-                </div>
-              </a>
-            </div>
-            <div class="col-auto">
-              <p class="text-white-50">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-lg-7">
+            <div class="input-group mb-3">
+              <input
+                type="email"
+                class="form-control py-2 custom-bg-secondary text-white"
+                placeholder="Enter your email to subscribe..."
+              />
+              <button
+                class="btn btn-primary custom-bg-primary text-white px-4"
+                type="button"
+                id="subscribe-button"
+              >
+                Subscribe
+              </button>
             </div>
           </div>
+          <div class="col-lg-3 d-flex">
+            <a
+              href="https://www.facebook.com"
+              class="text-decoration-none mx-1"
+            >
+              <div
+                class="icon-lg-container p-1 bg-danger rounded-circle custom-bg-secondary"
+              >
+                <i
+                  class="fa-brands fa-facebook-f fa-lg custom-text-primary"
+                ></i>
+              </div>
+            </a>
+            <a href="https://www.twitter.com" class="text-decoration-none mx-1">
+              <div
+                class="icon-lg-container p-1 bg-danger rounded-circle custom-bg-secondary"
+              >
+                <i class="fa-brands fa-twitter fa-lg custom-text-primary"></i>
+              </div>
+            </a>
+            <a href="https://www.google.com" class="text-decoration-none mx-1">
+              <div
+                class="icon-lg-container p-1 bg-danger rounded-circle custom-bg-secondary"
+              >
+                <i
+                  class="fa-brands fa-google-plus-g fa-lg custom-text-primary"
+                ></i>
+              </div>
+            </a>
+            <a
+              href="https://www.pinterest.com"
+              class="text-decoration-none mx-1"
+            >
+              <div
+                class="icon-lg-container p-1 bg-danger rounded-circle custom-bg-secondary"
+              >
+                <i class="fa-brands fa-pinterest fa-lg custom-text-primary"></i>
+              </div>
+            </a>
+          </div>
+          <div class="col-auto">
+            <p class="text-white-50">
+              Copyright 2014 Company name. Designed by Themezy. All rights
+              reserved
+            </p>
+          </div>
+        </div>
       </div>
     </footer>
 
